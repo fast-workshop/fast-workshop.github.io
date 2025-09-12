@@ -72,6 +72,47 @@ input, select, textarea {
 	appearance: none;
 }
 
+/* Fonts */
+
+@font-face {
+  font-family: "Alegreya";
+  src: url("/assets/webfonts/Alegreya-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Didact Gothic";
+  src: url("/assets/webfonts/DidactGothic-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* Opening section */
+
+.hero{display:flex;align-items:stretch;justify-content:space-between;gap:clamp(16px,4vw,48px);padding:clamp(12px,3vw,32px)}
+.title-col{flex:1 1 auto;display:flex;flex-direction:column;justify-content:space-between}
+.title-group{display:flex;align-items:flex-start}
+.hero-title{
+  font-family:"Alegreya",serif;
+  font-weight:500;
+  font-size:clamp(36px,6.5vw,69px);
+  line-height:1.12;
+  margin:0;
+  color:#000;
+}
+.hero-title span{display:block}
+.hero-title span::first-letter{color:#e3411f}
+
+.meta{margin-top:auto}
+.hero-subtitle{font-family:"Didact Gothic",sans-serif;font-size:clamp(18px,3.2vw,34px);line-height:1.25;margin:0.4rem 0 0}
+.hero-subtitle .fast{color:#e3411f}
+.hero-image{flex:0 0 auto;width:clamp(90px,18vw,260px);display:flex;align-items:flex-end}
+.hero-image img{width:100%;height:auto;object-fit:contain}
+
 /* Basic */
 
 	@-ms-viewport {
@@ -182,17 +223,6 @@ input, select, textarea {
   .person .avatar { width: 64px; height: 64px; }
 }
 
-
-/* Opening section */
-
-.qhSjVA.t_jp1w {
-  transform: translateY(0);
-  display: none;
-}
-.qhSjVA.aXkuWA {
-  transform: translateY(100%);
-  display: none;
-}
 
 /* Type */
 
