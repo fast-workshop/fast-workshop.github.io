@@ -230,7 +230,7 @@ input, select, textarea {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: var(--gap);
-  align-items: stretch;      /* equal card heights in row */
+  align-items: stretch;
   max-width: 1020px;
   margin: 0;
 }
@@ -241,7 +241,7 @@ input, select, textarea {
 
   display: grid;
   grid-template-columns: var(--avatar-w) 1fr;
-  grid-template-rows: var(--avatar-h) auto; /* top row fixed to avatar height */
+  grid-template-rows: var(--avatar-h) auto;
   gap: 0.9rem;
   padding: 1rem;
   border-radius: 14px;
@@ -269,7 +269,7 @@ input, select, textarea {
   grid-row: 1;
   display: flex;
   flex-direction: column;
-  height: var(--avatar-h);        /* ensures alignment with avatar */
+  height: var(--avatar-h);
   min-width: 0;
 }
 
@@ -289,9 +289,10 @@ input, select, textarea {
 
 .speaker .affiliation {
   margin-top: auto;
-  margin-bottom: 0;               /* remove default p margin */
+  margin-bottom: 0;
   color: #555;
   font-size: .94rem;
+  line-height: 1.1;
 }
 
 .speaker .talk-block {
