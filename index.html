@@ -11,6 +11,40 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<style>
+		    .past {
+		      color: #CCC;
+		    }
+		    .past a {
+		      color: #CCC;
+		      text-decoration: none;
+		    }
+		    .past a:hover {
+		      color: #777;
+		    }
+		  </style>
+
+		  <script>
+		    document.addEventListener("DOMContentLoaded", () => {
+		      // Get current time in AoE (UTC−12)
+		      const nowAoE = new Date(Date.now() - 12 * 60 * 60 * 1000);
+
+		      const rows = document.querySelectorAll("#schedule tr");
+		      rows.forEach(row => {
+		        const dateCell = row.querySelector("td strong");
+		        if (dateCell) {
+		          const cleanText = dateCell.textContent.replace("(AoE)", "").trim();
+		          const parsedDate = new Date(cleanText + " 23:59:59 UTC"); 
+
+		          if (parsedDate < nowAoE) {
+		            row.classList.add("past");
+		          }
+		        }
+		      });
+		    });
+		  </script>
+
 	</head>
 
 	<body class="is-preload">
@@ -176,7 +210,7 @@
 						<h2>Important Dates</h2>
 					</header>
 							
-				  	<table>
+				  	<table id="schedule">
 				    	<tbody>
 							<tr><td><strong>September 12, 2025</strong></td><td>Submission window opens (<a href="https://openreview.net/group?id=AAAI.org/2026/Workshop/FAST">OpenReview</a>)</td></tr>
 							<!-- <tr>
