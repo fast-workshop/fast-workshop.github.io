@@ -26,24 +26,34 @@
 		  </style>
 
 		  <script>
-		    document.addEventListener("DOMContentLoaded", () => {
-		      // Get current time in AoE (UTC−12)
-		      const nowAoE = new Date(Date.now() - 12 * 60 * 60 * 1000);
+			  document.addEventListener("DOMContentLoaded", () => {
+			    const nowAoE = new Date(Date.now() - 12 * 60 * 60 * 1000);
 
-		      const rows = document.querySelectorAll("#schedule tr");
-		      rows.forEach(row => {
-		        const dateCell = row.querySelector("td strong");
-		        if (dateCell) {
-		          const cleanText = dateCell.textContent.replace("(AoE)", "").trim();
-		          const parsedDate = new Date(cleanText + " 23:59:59 UTC"); 
+			    const rows = document.querySelectorAll("#schedule tr");
+			    rows.forEach(row => {
+			      const dateCell = row.querySelector("td strong");
+			      if (dateCell) {
+			        const cleanText = dateCell.textContent.replace("(AoE)", "").trim();
+			        const parsedDate = new Date(cleanText + " 23:59:59 UTC");
+			        if (parsedDate < nowAoE) {
+			          row.classList.add("past");
+			        }
+			      }
+			    });
 
-		          if (parsedDate < nowAoE) {
-		            row.classList.add("past");
-		          }
-		        }
-		      });
-		    });
-		  </script>
+			    const submissionDeadline = new Date("October 25, 2025 23:59:59 UTC");
+			    const submitButton = document.querySelector('a.button.primary[href*="openreview.net"]');
+
+			    if (submitButton && nowAoE > submissionDeadline) {
+			      submitButton.style.backgroundColor = "#aaa";
+			      submitButton.style.borderColor = "#aaa";
+			      submitButton.style.cursor = "not-allowed";
+			      submitButton.style.pointerEvents = "none";
+			      submitButton.textContent = "Submission Closed";
+			    }
+			  });
+			</script>
+
 
 	</head>
 
