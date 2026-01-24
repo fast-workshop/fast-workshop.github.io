@@ -438,12 +438,16 @@ input, select, textarea {
 }
 
 .accepted-papers-list li {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
   padding-left: 0;
+  border-bottom: solid 1px #c9c9c9;
 }
 
 .accepted-papers-list li:last-child {
   margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
 }
 
 .accepted-papers-list .paper-title {
@@ -457,6 +461,50 @@ input, select, textarea {
   font-size: 0.85em;
   color: #888;
   margin-top: 0.2rem;
+}
+
+.accepted-papers-list details.abstract {
+  margin-top: 0.4rem;
+}
+
+.accepted-papers-list details.abstract > summary {
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 600;
+  font-size: 0.85em;
+  color: #1a73e8;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  outline: none;
+}
+
+.accepted-papers-list details.abstract > summary::before {
+  content: "▸";
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.accepted-papers-list details.abstract[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.accepted-papers-list details.abstract > summary::-webkit-details-marker {
+  display: none;
+}
+
+.accepted-papers-list .abstract-content {
+  margin-top: 0.5rem;
+  font-size: 0.9em;
+  line-height: 1.5;
+  color: #444;
+  padding-left: 1rem;
+  border-left: 2px solid #eee;
+}
+
+.accepted-papers-list details.abstract[open] .abstract-content {
+  animation: fadeIn 0.2s ease;
 }
 
 /* Type */
