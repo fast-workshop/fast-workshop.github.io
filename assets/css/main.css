@@ -429,6 +429,36 @@ input, select, textarea {
   margin-top: 0.1rem;
 }
 
+/* Accepted Papers list */
+
+.accepted-papers-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.accepted-papers-list li {
+  margin-bottom: 1.25rem;
+  padding-left: 0;
+}
+
+.accepted-papers-list li:last-child {
+  margin-bottom: 0;
+}
+
+.accepted-papers-list .paper-title {
+  display: block;
+  color: #585858;
+  line-height: 1.4;
+}
+
+.accepted-papers-list .paper-authors {
+  display: block;
+  font-size: 0.85em;
+  color: #888;
+  margin-top: 0.2rem;
+}
+
 /* Type */
 
 	body, input, select, textarea {
