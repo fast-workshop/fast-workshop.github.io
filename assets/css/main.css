@@ -222,6 +222,21 @@ input, select, textarea {
   .person .avatar { width: 64px; height: 64px; }
 }
 
+.award-badge {
+    display: inline-block;
+    margin-left: 0.5em;
+    padding: 0.1em 0.55em;
+    font-size: 0.75em;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: #8a6508;
+    background: #fdf4dc;
+    border: 1px solid #e8c76a;
+    border-radius: 999px;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
 /* Speakers grid */
 
 .speakers-grid {
