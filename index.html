@@ -1,0 +1,478 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Foundations of Agentic Systems Theory</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<style>
+		    .past {
+		      color: #CCC;
+		    }
+		    .past a {
+		      color: #CCC;
+		      text-decoration: none;
+		    }
+		    .past a:hover {
+		      color: #777;
+		    }
+		    .prev-link {
+		      font-size: 0.75em;
+		      opacity: 0.75;
+		    }
+		  </style>
+
+		  <script>
+			  document.addEventListener("DOMContentLoaded", () => {
+			    const nowAoE = new Date(Date.now() - 12 * 60 * 60 * 1000);
+
+			    const rows = document.querySelectorAll("#schedule tr");
+			    rows.forEach(row => {
+			      const dateCell = row.querySelector("td strong");
+			      if (dateCell) {
+			        const cleanText = dateCell.textContent.replace("(AoE)", "").trim();
+			        const parsedDate = new Date(cleanText + " 23:59:59 UTC");
+			        if (parsedDate < nowAoE) {
+			          row.classList.add("past");
+			        }
+			      }
+			    });
+
+			    const submissionDeadline = new Date("September 5, 2026 23:59:59 UTC");
+			    const submitButton = document.querySelector('a.button.primary[href*="openreview.net"]');
+
+			    if (submitButton && nowAoE > submissionDeadline) {
+			      submitButton.style.backgroundColor = "#aaa";
+			      submitButton.style.borderColor = "#aaa";
+			      submitButton.style.cursor = "not-allowed";
+			      submitButton.style.pointerEvents = "none";
+			      submitButton.style.textDecoration = "line-through";
+			      submitButton.textContent = "Submit Paper";
+			    }
+			  });
+			</script>
+
+	</head>
+
+	<body class="is-preload">
+
+		<div id="wrapper">
+
+			<div id="main">
+				<div class="inner">
+
+					<div class="hero">
+					  <div class="title-col">
+					    <div class="title-group">
+					      <h1 class="hero-title">
+					        <span>Foundations of</span>
+					        <span>Agentic</span>
+					        <span>Systems</span>
+					        <span>Theory</span>
+					      </h1>
+					    </div>
+
+					    <div class="meta">
+					      <p class="hero-subtitle">FAST @ <a href="https://neurips.cc/Conferences/2026">NeurIPS 2026</a></p>
+					      <p class="hero-subtitle">Paris</p>
+					      <p class="hero-subtitle prev-link">Past iteration: <a href="aaai2026/">FAST @ AAAI 2026</a></p>
+					    </div>
+					  </div>
+
+					  <div class="hero-image">
+					    <img src="images/fast.gif" alt="FAST">
+					  </div>
+					</div>
+
+					<br>
+					<br>
+
+					<!--
+					<aside class="callout" aria-labelledby="pc-callout">
+						<h2 class="callout-title" id="pc-callout">Join the program committee</h2>
+						<p class="callout-text">
+							We are currently accepting members for the FAST program committee. If you have experience building agentic AI systems or working on the concepts that underpin them (including work outside of computer science!) please send a (brief) statement of your experience to <a href="mailto:fast.workshop.team@gmail.com">fast.workshop.team@gmail.com</a>.
+						</p>
+					</aside>-->
+
+					<p>
+						As with any complex system, the most interesting and consequential behaviors often arise not from the parts in isolation, but from the patterns of interaction between them. The current development of agentic AI has largely ignored these considerations, instead focusing on designing more (individually) capable agents. Failing to consider these effects as AI agents become more widespread will lead to a significant underestimation in both their capabilities and risks.
+					</p>
+
+					<p>
+						There is an extensive body of knowledge underlying these interaction effects across various fields, but it’s not currently clear how applicable existing theoretical tools are to agentic AI systems. Tools from control theory, game/economic theory, and operations research typically impose strong structural assumptions on both agents and the overall system (such as the form of objective functions, state evolution/dynamics, or degree of rationality) in efforts to obtain concrete results. On the other hand, methods from the social sciences use observations of human behavior, cultural contexts, and social norms to make more measured claims about probable patterns within the complexity and variability of human experience. Agentic AI systems don’t cleanly map to either of these settings. The underlying LLM in an AI agent does not possess the same rational behavior as idealized control/game/economic agents, nor does it exhibit the culturally/emotionally/evolutionarily shaped behaviors that characterize human agents.
+					</p>
+
+					<p>
+						The <strong>Foundations of Agentic Systems Theory (FAST)</strong> workshop provides a venue for this investigation. Drawing from a variety of fields (notably beyond computer science, including complex systems, developmental biology, organizational sociology, and cognitive science), FAST explores which mechanisms of emergent behavior from other systems carry over to systems of LLM-based agents, the properties of the underlying agents (and their LLMs) that facilitate or impede these behaviors, and the extent to which system-wide outcomes can be controlled or induced. We strongly seek interdisciplinary participation (via both contributions and invited talks), with the ultimate goal of fundamentally contributing to a better understanding of the underlying processes that govern the system-level behavior (and risks) of agentic AI.
+					</p>
+
+
+					<br>
+
+					<ul class="actions">
+						<!-- TODO: confirm OpenReview link once the submission site is created -->
+						<li><a href="https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/FAST" class="button primary">Submit Paper</a></li>
+						<li><a href="https://neurips.cc/Register/view-registration" class="button primary">Registration</a></li>
+						<li><a href="https://www.viparis.com/en/our-venues/palais-des-congres-de-paris-en" class="button primary">Venue</a></li>
+					</ul>
+
+					<section>
+						<h2>Invited Speakers</h2>
+
+						<p>We are pleased to have the following keynote speakers as part of the FAST program.</p>
+
+						<div class="speakers-grid">
+
+							<article class="speaker">
+								<a class="avatar" href="https://drmichaellevin.org/">
+								  <img src="images/michaal_levin.jpeg" alt="Portrait of Michael Levin" loading="lazy" width="88" height="120">
+								</a>
+
+								<div class="info">
+								  <h3 class="name">
+								    <a href="https://drmichaellevin.org/">Michael Levin</a>
+								  </h3>
+								  <p class="affiliation">Faculty @<br>Tufts University</p>
+								</div>
+
+								<div class="talk-block">
+									<div class="abstract">
+										<details class="abstract">
+    										<summary>Biography</summary>
+    										<div class="abstract-content">
+												Dr. Michael Levin is the Vannevar Bush Distinguished Professor of Biology at Tufts University, where he directs the Allen Discovery Center and the Tufts Center for Regenerative and Developmental Biology, and is an associate faculty member at Harvard's Wyss Institute. His work spans bioelectricity, morphogenesis, and basal/collective cognition, asking how competent parts (from cells to tissues) compose into collective-level agents with goals of their own. His "cognitive light cone" framework offers an experimentally grounded way to characterize and compare diverse bodies and minds, and speaks directly to whether (and how) system-level agency can emerge from composition.
+											</div>
+  										</details>
+									</div>
+								</div>
+							</article>
+
+							<article class="speaker">
+								<a class="avatar" href="https://scholar.google.com/citations?user=jLcGAcQAAAAJ">
+								  <img src="images/danielle_perszyk.jpeg" alt="Portrait of Danielle Perszyk" loading="lazy" width="88" height="120">
+								</a>
+
+								<div class="info">
+								  <h3 class="name">
+								    <a href="https://scholar.google.com/citations?user=jLcGAcQAAAAJ">Danielle Perszyk</a>
+								  </h3>
+								  <p class="affiliation">Cognitive Scientist @<br>Amazon AGI SF Lab</p>
+								</div>
+
+								<div class="talk-block">
+									<div class="abstract">
+										<details class="abstract">
+    										<summary>Biography</summary>
+    										<div class="abstract-content">
+												Dr. Danielle Perszyk is a cognitive scientist and member of the technical staff at Amazon's AGI SF Lab, where she leads the human-computer interaction team and works on foundational capabilities for practical AI agents that can act in both digital and physical environments. She earned her PhD from Northwestern University, studying language evolution and social-cognitive development, and previously contributed to AI efforts at Google and Adept. Her work bridges developmental cognitive science and agentic AI deployment, with direct insight into which developmental mechanisms are tractable to engineer.
+											</div>
+  										</details>
+									</div>
+								</div>
+							</article>
+
+							<article class="speaker">
+								<a class="avatar" href="https://research.google/people/107544/">
+								  <img src="images/winnie_street.jpeg" alt="Portrait of Winnie Street" loading="lazy" width="88" height="120">
+								</a>
+
+								<div class="info">
+								  <h3 class="name">
+								    <a href="https://research.google/people/107544/">Winnie Street</a>
+								  </h3>
+								  <p class="affiliation">Researcher @<br>Google Research</p>
+								</div>
+
+								<div class="talk-block">
+									<div class="abstract">
+										<details class="abstract">
+    										<summary>Biography</summary>
+    										<div class="abstract-content">
+												Winnie Street is a researcher on the Paradigms of Intelligence team at Google, based in London, and is also affiliated with the Institute of Philosophy at the University of London's School of Advanced Study. Her research examines social cognition in large language models, including work showing that LLMs can reach adult human performance on higher-order theory of mind tasks, and traces the implications of machine theory of mind for alignment and group dynamics. This line of work makes social-cognitive mechanisms a tractable subject for systems-level study.
+											</div>
+  										</details>
+									</div>
+								</div>
+							</article>
+
+							<article class="speaker">
+								<a class="avatar" href="http://kasirzadeh.org/">
+								  <img src="images/atoosa_kasirzadeh.jpeg" alt="Portrait of Atoosa Kasirzadeh" loading="lazy" width="88" height="120">
+								</a>
+
+								<div class="info">
+								  <h3 class="name">
+								    <a href="http://kasirzadeh.org/">Atoosa Kasirzadeh</a>
+								  </h3>
+								  <p class="affiliation">Faculty @<br>Carnegie Mellon University /<br>Google DeepMind</p>
+								</div>
+
+								<div class="talk-block">
+									<div class="abstract">
+										<details class="abstract">
+    										<summary>Biography</summary>
+    										<div class="abstract-content">
+												Dr. Atoosa Kasirzadeh is a philosopher of AI ethics and governance at Carnegie Mellon University, with an affiliation at Google DeepMind, and a member of the World Economic Forum's Global Future Council on artificial general intelligence. Her research includes work distinguishing decisive from accumulative AI existential risk and on characterizing AI agents for alignment and governance, which frames the system-level risks that motivate this workshop. She also served as an organizer of the first iteration of FAST.
+											</div>
+  										</details>
+									</div>
+								</div>
+							</article>
+
+						</div>
+
+					</section>
+
+					<section>
+						<header class="major" id="panel">
+							<h2>Panel Discussion</h2>
+						</header>
+
+						<p>
+							The day will feature an hour-long moderated panel, "Mind to machines: Emergence, methods, and risks" (moderated by <a href="https://joshuakrook.com/">Joshua Krook</a>), consisting of selected experts in the field. The panel members and the specific topics for discussion will be announced here closer to the workshop.
+						</p>
+					</section>
+
+					<section>
+						<header class="major" id="program">
+							<h2>Program</h2>
+						</header>
+
+						<p>
+							The workshop will open with brief remarks from the organizers, followed by a mix of 30-minute keynotes, two contributed talk sessions, two poster sessions, and panel, with networking breaks throughout to maximize discussion time.
+						</p>
+
+						<p>
+							The detailed schedule will be posted here once paper decisions have been finalized.
+						</p>
+					</section>
+
+					<section>		
+						<header class="major" id="dates">
+							<h2>Important Dates</h2>
+						</header>
+								
+					  	<table id="schedule">
+					    	<tbody>
+								<!-- TODO: add the OpenReview opening date once known -->
+								<tr><td><strong>TBA</strong></td><td>Submission window opens (<a href="https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/FAST">OpenReview</a>)</td></tr>
+								<tr><td><span style="color:#c00; text-decoration:line-through;">August 29, 2026</span> <strong>September 5, 2026</strong> (AoE)</td><td>Paper submission deadline</td></tr>
+								<tr><td><strong>September 26, 2026</strong> (AoE)</td><td>Acceptance notification</td></tr>
+								<tr><td><strong>December 12 or 13, 2026</strong></td><td>Workshop (exact day to be announced)</td></tr>
+						    </tbody>
+				  		</table>
+			  		</section>
+
+					<section>
+						<h2>Scope and Topics</h2>
+						<p>
+							Large language models have recently become sophisticated enough to be reliably integrated into more complex pipelines, leading to more automated (i.e., agentic) use cases. However, the community has focused disproportionately on <em>building</em> these systems rather than <em>understanding</em> why they may (or may not) work. The goal of the FAST workshop is to investigate how both existing theory (notably that outside of the traditional AI community) and new insights (unique to LLM-based agents) can help to build this understanding.
+						</p>
+
+						<p>
+							As such, we invite submissions on the following topics:
+							<ul>
+								<li>Mechanisms of emergent capabilities and behaviors in agentic systems</li>
+								<li>Evaluation, detection, and bounding of emergent capabilities or failure modes</li>
+								<li>Harness engineering and (neuro-symbolic) scaffolding</li>
+								<li>Theory of mind and recursive social cognition</li>
+								<li>Formation of norms, conventions, and collective bias in populations of agents</li>
+								<li>Compositional safety and governance</li>
+								<li>Definitions and philosophy of agency and emergence in engineered systems</li>
+								<li>Observability/monitorability and steerability/controllability of populations of agents</li>
+							</ul>
+						</p>
+					</section>
+
+					<section>
+						<header class="major" id="submission">
+							<h2>Submission Information</h2>
+						</header>
+
+						<p>
+							Submissions can be either full or short papers:
+
+							<ul>
+								<li><strong>Full papers</strong>:
+									Up to 7 pages (excluding references and appendices); should present mature or completed research. 
+								</li>
+								<li><strong>Short papers</strong>:
+									Up to 4 pages (excluding references and appendices); intended for describing ongoing work, early-stage ideas, or the release of benchmarks and datasets (authors are encouraged to use the short paper format for benchmarks and datasets).
+								</li>
+							</ul>
+						</p>
+
+						<p>
+							All submissions must be made through our <a href="https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/FAST">OpenReview page</a>. Please use the <a href="https://neurips.cc/Conferences/2026/CallForPapers">NeurIPS 2026 template</a> when preparing your submission. Violation of the length or formatting requirements will result in desk rejection. For more serious issues, e.g., hallucinated references, all submissions associated with those authors will be removed without review.
+						</p>
+
+						<p>
+							Submissions must be anonymized for double-blind review. Reviewing will follow the standards of NeurIPS, with evaluation based on novelty, technical depth, clarity, reproducibility, and potential impact. Accepted papers will be presented as either posters or contributed talks. At least one author of each accepted paper must register and attend the workshop. If you have any questions, please contact us at <a href="mailto:fast.workshop.team@gmail.com">fast.workshop.team@gmail.com</a>.
+						</p>
+
+						<p>
+							Papers are non-archival but will be given the option to appear on OpenReview. This means that you can submit papers that are under submission elsewhere.
+						</p>
+
+					</section>
+
+					<section> 
+					
+						<header class="major" id="chairs">
+							<h2>Organizers</h2>
+						</header>
+
+						<div class="people-grid">
+
+							<!-- Erik -->
+							<article class="person">
+								<a class="avatar" href="https://research.ibm.com/people/erik-miehling">
+								  <img src="images/erik_miehling.jpeg" alt="Portrait of Erik Miehling">
+								</a>
+								<div class="info">
+								  <h3 class="name">
+								    <a href="https://research.ibm.com/people/erik-miehling" rel="noopener">Erik Miehling</a>
+								  </h3>
+								  <p class="affiliation">IBM Research - Ireland</p>
+								  <p class="email"><a href="mailto:erik.miehling@ibm.com">erik.miehling@ibm.com</a></p>
+								</div>
+							</article>
+
+							<!-- Madeline -->
+							<article class="person">
+								<a class="avatar" href="https://www.mgreinecke.com/">
+								  <img src="images/madeleine_reinecke.png" alt="Portrait of Madeline Reinecke">
+								</a>
+								<div class="info">
+								  <h3 class="name"><a href="https://www.mgreinecke.com/" rel="noopener">Madeline Reinecke</a></h3>
+								  <p class="affiliation">University of Oxford</p>
+								  <p class="email"><a href="mailto:madeline.reinecke@psych.ox.ac.uk">madeline.reinecke@psych.ox.ac.uk</a></p>
+								</div>
+							</article>
+
+							<!-- Hamza -->
+							<article class="person">
+								<a class="avatar" href="https://hamzamostafa.com/">
+								  <img src="images/hamza_mostafa.jpeg" alt="Portrait of Hamza Mostafa">
+								</a>
+								<div class="info">
+								  <h3 class="name"><a href="https://hamzamostafa.com/" rel="noopener">Hamza Mostafa</a></h3>
+								  <p class="affiliation">University of Waterloo</p>
+								  <p class="email"><a href="mailto:hamza.oruba@gmail.com">hamza.oruba@gmail.com</a></p>
+								</div>
+							</article>
+
+							<!-- Jordan -->
+							<article class="person">
+								<a class="avatar" href="https://scholar.google.com/citations?user=-UUj8gkAAAAJ">
+								  <img src="images/jordan_mcafoose.jpeg" alt="Portrait of Jordan McAfoose">
+								</a>
+								<div class="info">
+								  <h3 class="name"><a href="https://scholar.google.com/citations?user=-UUj8gkAAAAJ" rel="noopener">Jordan McAfoose</a></h3>
+								  <p class="affiliation">IBM Research - Zurich</p>
+								  <p class="email"><a href="mailto:mca@zurich.ibm.com">mca@zurich.ibm.com</a></p>
+								</div>
+							</article>
+
+							<!-- Irina -->
+							<article class="person">
+								<a class="avatar" href="https://mila.quebec/en/directory/irina-rish">
+								  <img src="images/irina_rish.jpeg" alt="Portrait of Irina Rish">
+								</a>
+								<div class="info">
+								  <h3 class="name"><a href="https://mila.quebec/en/directory/irina-rish" rel="noopener">Irina Rish</a></h3>
+								  <p class="affiliation">Universit&eacute; de Montr&eacute;al / Mila</p>
+								  <p class="email"><a href="mailto:irina.rish@gmail.com">irina.rish@gmail.com</a></p>
+								</div>
+							</article>
+
+							<!-- Djallel -->
+							<article class="person">
+								<a class="avatar" href="https://research.ibm.com/publications?author=1736">
+								  <img src="images/djallel_bouneffouf.jpeg" alt="Portrait of Djallel Bouneffouf">
+								</a>
+								<div class="info">
+								  <h3 class="name"><a href="https://research.ibm.com/publications?author=1736" rel="noopener">Djallel Bouneffouf</a></h3>
+								  <p class="affiliation">IBM Research - Yorktown Heights</p>
+								  <p class="email"><a href="mailto:djallel.bouneffouf@ibm.com">djallel.bouneffouf@ibm.com</a></p>
+								</div>
+							</article>
+
+						</div>
+
+					</section>
+
+					<!--
+					<section>
+						<header class="major" id="accepted_papers">
+							<h3>Accepted Papers</h3>
+						</header>
+
+						<h4 id="spotlight">Contributed Talks</h4>
+						<ul>
+							<li><font color="#">Title</font><br>
+								Author (affiliation)
+							</li>
+						</ul>
+
+						<h4>Poster Presentations</h4>
+						<ul>
+							<li><font color="#">Title</font><br>
+								Author (affiliation)
+							</li>
+						</ul>
+						
+					</section>
+					-->
+
+					<!-- Program Committee section to be added once members are confirmed -->
+
+					<!--
+					<section>
+						<header class="major" id="sponsors">
+							<h2>Sponsors</h2> 
+						</header>								
+					</section>
+					-->
+
+				</div>
+
+			</div>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<section>
+						<h2>Contact</h2>
+						<ul class="icons">
+							<li>
+								<a href="mailto:fast.workshop.team@gmail.com">fast.workshop.team@gmail.com</a>
+							</li>
+						</ul>							
+					</section>
+					<ul class="copyright">
+						<li>Design forked from: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>Graphics courtesy of: <a href="https://www.canva.com">Canva</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
