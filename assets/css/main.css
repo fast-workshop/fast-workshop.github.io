@@ -487,32 +487,41 @@ input, select, textarea {
   vertical-align: top;
 }
 
-.schedule-table .paper-list {
+#program-schedule .paper-list {
   list-style: none;
   margin: 0.75rem 0 0 0;
   padding: 0;
 }
 
-.schedule-table .paper-list li {
+#program-schedule .paper-list li {
   margin-bottom: 0.6rem;
   padding-left: 0;
 }
 
-.schedule-table .paper-list li:last-child {
+#program-schedule .paper-list li:last-child {
   margin-bottom: 0;
 }
 
-.schedule-table .paper-title {
+#program-schedule .paper-title {
   display: block;
   font-size: 0.95rem;
   color: #444;
 }
 
-.schedule-table .paper-authors {
+#program-schedule .paper-authors {
   display: block;
   font-size: 0.85rem;
   color: #888;
   margin-top: 0.1rem;
+}
+
+#program-schedule summary {
+  cursor: pointer;
+}
+
+#program-schedule summary::marker,
+#program-schedule summary::-webkit-details-marker {
+  font-size: 0.7em;
 }
 
 /* Accepted Papers list */
